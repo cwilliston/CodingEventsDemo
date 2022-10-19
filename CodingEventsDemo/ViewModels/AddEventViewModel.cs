@@ -15,5 +15,12 @@ namespace CodingEventsDemo.ViewModels
 
         [EmailAddress]
         public string ContactEmail { get; set; }
+
+        [Required(ErrorMessage = "Location is required")]
+        [StringLength(30)]
+        public string Location { get; set; }
+
+        [Range(0, 100000)]
+        public int Attendees { get; set; }
     }
 }
